@@ -40,7 +40,16 @@ class SLinkedList:
                     index +=1
                 nextNode = tempNode.next
                 tempNode.next = newNode
-                tempNode.next = nextNode                           
+                tempNode.next = nextNode     
+                
+    def transversal(self):
+        if self.head is None:
+            print('The SLL does not exist')
+        else:
+            node = self.head
+            while node is not None:
+                print(node.value)
+                node = node.next                                       
                 
 # create a linked list using these class  
 
@@ -58,6 +67,7 @@ SinglyLinkedList.insertSLL(10,1)
 SinglyLinkedList.insertSLL(50,0)
 
 print([node.value for node in SinglyLinkedList])
+SinglyLinkedList.transversal()
 
 
 
